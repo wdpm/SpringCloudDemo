@@ -11,7 +11,7 @@ spring:
 #        locator:
 #          enabled: true
       routes:
-      - id: testModule
+      - id: test
         uri: http://localhost:9998/
         predicates:
           - Path=/**
