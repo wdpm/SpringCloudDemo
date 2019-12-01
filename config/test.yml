@@ -11,14 +11,19 @@ spring:
 
 server:
   port: 9999
+
 eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     healthcheck:
       enabled: true
     register-with-eureka: true
     fetch-registry: true
-    service-url:
-      defaultZone: http://admin:admin123@localhost:8100/eureka/
+#    service-url:
+#      defaultZone: http://admin:admin123@localhost:8100/eureka/
+
 #data:
 #  message: test1
 #management:
