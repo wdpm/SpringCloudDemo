@@ -23,11 +23,12 @@ eureka:
     fetch-registry: true
 
 data:
-  message: '{cipher}dbe13dedc998d1a5a597e5b8c116961ddce44ca329179527e9bc9d1d1a9f2f63'
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: refresh,health,info
+  message: 'test1'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
 
 
