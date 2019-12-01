@@ -10,7 +10,7 @@ spring:
     publisherConfirms: true
 
 server:
-  port: 9999
+  port: 9998
 
 eureka:
   instance:
