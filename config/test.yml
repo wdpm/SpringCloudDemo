@@ -23,7 +23,7 @@ eureka:
     fetch-registry: true
 
 data:
-  message: 'test1'
+  message: 'changed'
 
 management:
   endpoints:
