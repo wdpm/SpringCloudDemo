@@ -1,6 +1,14 @@
 spring:
   application:
     name: test
+  rabbitmq:
+    host: 192.168.31.12
+    port: 5672
+    username: evan
+    password: 123456
+    virtualHost: /
+    publisherConfirms: true
+
 server:
   port: 9999
 eureka:
