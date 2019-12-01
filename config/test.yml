@@ -21,11 +21,9 @@ eureka:
       enabled: true
     register-with-eureka: true
     fetch-registry: true
-#    service-url:
-#      defaultZone: http://admin:admin123@localhost:8100/eureka/
 
-#data:
-#  message: test1
+data:
+  message: test1
 #management:
 #  endpoints:
 #    web:
