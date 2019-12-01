@@ -23,7 +23,7 @@ eureka:
     fetch-registry: true
 
 data:
-  message: test1
+  message: '{cipher dbe13dedc998d1a5a597e5b8c116961ddce44ca329179527e9bc9d1d1a9f2f63}'
 #management:
 #  endpoints:
 #    web:
