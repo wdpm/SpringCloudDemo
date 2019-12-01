@@ -1,15 +1,20 @@
 server:
   port: 8080
 
+# http://gateway_host:gateway_port/serviceId/**
 spring:
   application:
     name: gateway
   cloud:
     gateway:
-#      http://gateway_host:gateway_port/serviceId/**
-      discovery:
-        locator:
-          enabled: true
+#      discovery:
+#        locator:
+#          enabled: true
+      routes:
+      - id: test
+        uri: lb://TEST/test
+        predicates:
+          - Path=/test
 logging:
   level:
     org.springframework.cloud.gateway: trace
