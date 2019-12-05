@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: register
+  security:
+    user:
+      name: admin
+      password: admin123
+  profiles:
+    active: node1
+#    active: node2
+  cloud:
+    inetutils:
+      preferred-networks: 127.0.0.1
+  rabbitmq:
+    host: 192.168.31.12
+    port: 5672
+    username: evan
+    password: 123456
+    virtualHost: /
+    publisherConfirms: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  server:
+     enable-self-preservation: false
+  client:
+    register-with-eureka: true
+#    fetch-registry: false
+    fetch-registry: true
+    healthcheck:
+      enabled: true

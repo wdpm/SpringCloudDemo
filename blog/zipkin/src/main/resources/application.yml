@@ -1,0 +1,36 @@
+spring:
+  rabbitmq:
+    host: 192.168.31.12
+    port: 5672
+    username: evan
+    password: 123456
+    virtualHost: /
+    publisherConfirms: true
+
+server:
+  port: 9411
+
+management:
+  metrics:
+    web:
+      server:
+#        default is true
+        auto-time-requests: false
+
+
+#spring:
+#  rabbitmq:
+#    host: ${RABBIT_HOST:localhost}
+#  datasource:
+#    schema: classpath:/mysql.sql
+#    url: jdbc:mysql://${MYSQL_HOST:localhost}/test
+#    username: root
+#    password: root
+#    # Switch this on to create the schema on startup:
+#    initialize: true
+#    continueOnError: true
+#  sleuth:
+#    enabled: false
+#zipkin:
+#  storage:
+#    type: mysql

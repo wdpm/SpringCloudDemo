@@ -1,0 +1,17 @@
+# eurekaclient.yml is some needed key-values that an eureka client should has.
+spring:
+  cloud:
+    config:
+#      name: eurekaclient,gateway,encrypt
+      name: eurekaclient,gateway,rabbitmq,encrypt
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config
+      username: admin
+      password: admin
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123@localhost:8100/eureka/

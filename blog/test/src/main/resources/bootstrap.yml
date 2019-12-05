@@ -1,0 +1,41 @@
+spring:
+  cloud:
+    config:
+      username: admin
+      password: admin
+      name: test,eurekaclient
+#      name: test
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:8100/eureka/
+
+# for local test two aware eureka server
+#spring:
+#  application:
+#    name: test
+#  rabbitmq:
+#    host: 192.168.31.12
+#    port: 5672
+#    username: evan
+#    password: 123456
+#    virtualHost: /
+#    publisherConfirms: true
+#
+#server:
+#  port: 9999
+#
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: false
+#    service-url:
+##      defaultZone: http://admin:admin123@node1:8100/eureka/
+#      defaultZone: http://admin:admin123@node1:8100/eureka/,http://admin:admin123@node2:8101/eureka/
